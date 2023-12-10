@@ -1,0 +1,141 @@
+﻿Tool,Description,ArgumentName,ArgumentDescription,ArgumentType,ArgumentValueExample,
+works_list,Returns a list of work items matching the request,applies_to_part,Filters for work belonging to any of the provided parts,array of strings,"Example:
+[""FEAT-123"",
+""ENH-123"",
+""PROD-123"",
+""CAPL-123""]",
+works_list,Returns a list of work items matching the request,created_by,"Filters for work
+created by any of
+these users",array of strings,"Example:
+[""DEVU-123""]",
+works_list,Returns a list of work items matching the request,issue.priority,"Filters for issues
+with any of the
+provided
+priorities.
+Allowed values:
+p0, p1, p2, p3",array of strings,,
+works_list,Returns a list of work items matching the request,issue.rev_orgs,"Filters for issues
+with any of the
+provided Rev
+organizations",array of strings,"Example:
+[""REV-123""]",
+works_list,Returns a list of work items matching the request,limit,"The maximum
+number of works
+to return. The
+default is '50'",integer (int32),,
+works_list,Returns a list of work items matching the request,owned_by,"Filters for work
+owned by any of
+these users",array of strings,"Example:
+[""DEVU-123""]",
+works_list,Returns a list of work items matching the request,stage.name,"Filters for records
+in the provided
+stage(s) by name",array of strings,,
+works_list,Returns a list of work items matching the request,"ticket.needs_res
+ponse","Filters for tickets
+that need a
+response",boolean,,
+works_list,Returns a list of work items matching the request,ticket.rev_org,"Filters for tickets
+associated with
+any of the
+provided Rev organisations",array of strings,"Example:
+[""REV-123""]",
+works_list,Returns a list of work items matching the request,ticket.severity,"Filters for tickets
+with any of the
+provided
+severities.
+Allowed values:
+blocker, high,
+low, medium",array of strings,,
+works_list,Returns a list of work items matching the request,"ticket.source_ch
+annel","Filters for tickets
+with any of the
+provided source
+channels",array of strings,,
+works_list,Returns a list of work items matching the request,type,"Filters for work of
+the provided
+types. Allowed
+values: issue,
+ticket, task",array of strings,,
+"summarize_obje
+cts","Summarizes a
+list of objects.
+The logic of how
+to summarize a
+particular object
+type is an
+internal
+implementation
+detail.",objects,"List of objects to
+summarize",array of strings,,
+prioritize_objects,"Returns a list of
+objects sorted by
+priority. The logic
+of what
+constitutes
+priority for a
+given object is an
+internal
+implementation
+detail.",objects,"A list of objects
+to be prioritized",array of objects,,
+"add_work_items
+_to_sprint","Adds the given
+work items to
+the sprint",work_ids,"A list of work
+item IDs to be
+added to the
+sprint.",array of strings,,
+"add_work_items
+_to_sprint","Adds the given
+work items to
+the sprint",sprint_id,"The ID of the
+sprint to which
+the work items
+should be
+added",str,,
+get_sprint_id,"Returns the ID
+of the current
+sprint",,,,,
+"get_similar_work
+_items","Returns a list of
+work items that
+are similar to the
+given work item",work_id,"The ID of the
+work item for
+which you want
+to find similar
+items",string,,
+"search_object_b
+y_name","Given a search
+string, returns
+the id of a
+matching object
+in the system of
+record. If
+multiple
+matches are
+found, it returns
+the one where
+the confidence
+is highest.",query,"The search
+string, could be
+for example
+customer’s
+name, part
+name, user
+name.",string,,
+"create_actionabl
+e_tasks_from_te
+xt","Given a text,
+extracts
+actionable insights, and
+creates tasks for
+them, which are
+kind of a work
+item.",text,"The text from
+which the
+actionable insights need to
+be created.",string,,
+who_am_i,"Returns the
+string ID of the
+current user",,,,,
